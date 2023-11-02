@@ -26,4 +26,6 @@ public class DailyMealFragment extends Fragment {
 //        super.onDestroyView();
 //        binding = null;
 //    }
+
+    //mdafdsfsadfsadfsafsf
 }
