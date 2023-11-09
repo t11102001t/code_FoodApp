@@ -15,17 +15,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfoodapp.R;
 import com.example.myfoodapp.adapters.HomeHorAdapter;
+import com.example.myfoodapp.adapters.HomeVerAdapter;
+import com.example.myfoodapp.adapters.UpdateVerticalRec;
 import com.example.myfoodapp.databinding.FragmentHomeBinding;
 import com.example.myfoodapp.models.HomeHorModel;
+import com.example.myfoodapp.models.HomeVerModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements UpdateVerticalRec {
 
-    RecyclerView homeHorizontalRec;
-    List<HomeHorModel> homeHorModelList;
+    RecyclerView homeHorizontalRec,homeVerticalRec;
+    ArrayList<HomeHorModel> homeHorModelList;
     HomeHorAdapter homeHorAdapter;
+    //////
+    ArrayList<HomeVerModel> homeVerModelList;
+    HomeVerAdapter homeVerAdapter;
 
 
     @SuppressLint("MissingInflatedId")
@@ -35,21 +41,37 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         homeHorizontalRec = root.findViewById(R.id.home_hor_rec);
-
+        homeVerticalRec = root.findViewById(R.id.home_ver_rec);
         homeHorModelList = new ArrayList<>();
 
         homeHorModelList.add(new HomeHorModel(R.drawable.pizza,"Pizza"));
         homeHorModelList.add(new HomeHorModel(R.drawable.hamburger,"Hamburger"));
         homeHorModelList.add(new HomeHorModel(R.drawable.fried_potatoes,"Fried"));
         homeHorModelList.add(new HomeHorModel(R.drawable.ice_cream,"Ice Cream"));
-        homeHorModelList.add(new HomeHorModel(R.drawable.sandwich,"Sanwich"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.sandwich,"Sandwich"));
 
-        homeHorAdapter = new HomeHorAdapter(getActivity(),homeHorModelList);
+        homeHorAdapter = new HomeHorAdapter(this,getActivity(),homeHorModelList);
         homeHorizontalRec.setAdapter(homeHorAdapter);
         homeHorizontalRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
         homeHorizontalRec.setHasFixedSize(true);
         homeHorizontalRec.setNestedScrollingEnabled(false);
+
+        homeVerModelList = new ArrayList<>();
+
+        homeVerAdapter = new HomeVerAdapter(getActivity(),homeVerModelList);
+        homeVerticalRec.setAdapter(homeVerAdapter);
+        homeVerticalRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
+        homeVerticalRec.setHasFixedSize(true);
+        homeVerticalRec.setNestedScrollingEnabled(false);
+
         return root;
+    }
+
+    @Override
+    public void callBack(int position, ArrayList<HomeVerModel> list) {
+        homeVerAdapter = new HomeVerAdapter(getContext(),list);
+        homeVerAdapter.notifyDataSetChanged();
+        homeVerticalRec.setAdapter(homeVerAdapter);
     }
 
 //    @Override
