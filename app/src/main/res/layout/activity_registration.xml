@@ -95,6 +95,7 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
+        android:id="@+id/phone_num"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#CCCCCC"
@@ -142,6 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <TextView
+        android:id="@+id/log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"

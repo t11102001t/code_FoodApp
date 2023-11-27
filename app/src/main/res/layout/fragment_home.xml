@@ -50,7 +50,7 @@
             android:layout_margin="6dp"
             android:layout_marginStart="4dp"
             android:fontFamily="@font/amarante"
-            android:text="Hello Nhom8"
+            android:text="Food App N8"
             android:textColor="@color/white"
             android:textSize="35sp"
             app:layout_constraintStart_toStartOf="parent"
