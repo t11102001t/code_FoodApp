@@ -39,4 +39,18 @@
     <string name="food_name">Food name</string>
     <string name="make_order">Make Order</string>
     <string name="my_cart1">my cart</string>
+    <string name="sing_inn">Đăng Nhập</string>
+    <string name="emaill">Tài Khoản</string>
+    <string name="passwordd">Mật Khẩu</string>
+    <string name="registerr">Đăng Ký</string>
+    <string name="full_namee">Họ Và Tên</string>
+    <string name="phone_numberr">Số Điện Thoại</string>
+    <string name="already_registeredd">Bạn đã có tài khoản</string>
+    <string name="hello_explore_your_dream_foodd">Khám phá những món ăn của chúng tôi</string>
+    <string name="_10_weekend_delicious_ndinner_recipess">Những món ăn ngon cuối tuần</string>
+    <string name="view_moree">Xem thêm</string>
+    <string name="menu_homee">Trang Chủ</string>
+    <string name="daily_meall">Bữa ăn hàng ngày</string>
+    <string name="favouritee">Yêu thích</string>
+    <string name="my_cartt">Giỏ hàng</string>
 </resources>

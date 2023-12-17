@@ -25,12 +25,12 @@
         android:background="@color/gray"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white">
-        
+
         <Button
             android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log Out"
+            android:text="Đăng Xuất"
             android:layout_gravity="bottom"
             android:textAllCaps="false"
             android:textStyle="bold"

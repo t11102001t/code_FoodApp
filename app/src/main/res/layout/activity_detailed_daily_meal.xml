@@ -19,7 +19,7 @@
         android:fitsSystemWindows="true"
         app:contentScrim="?attr/colorPrimary"
         app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-        app:title="Daily Meals">
+        app:title="Bữa ăn hàng ngày">
 
         <ImageView
             android:id="@+id/detailed_img"
